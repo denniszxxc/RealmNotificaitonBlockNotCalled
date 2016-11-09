@@ -109,6 +109,11 @@
     [self chickenAddRemoveAction];
 }
 
+- (IBAction)didClickHumanChickenReverseTest:(id)sender {
+    [self chickenAddRemoveAction];
+    [self humanAddRemoveAction];
+}
+
 - (IBAction)didClickHumanChickenAlienTest:(id)sender {
     [self humanAddRemoveAction];
     [self chickenAddRemoveAction];
