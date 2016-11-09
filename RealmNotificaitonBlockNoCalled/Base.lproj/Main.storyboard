@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,7 +17,43 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quj-Rh-Yqf">
+                                <state key="normal" title="Human Add &amp; Remove"/>
+                                <connections>
+                                    <action selector="didClickHumanTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AAg-iR-fRi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzT-nA-uyh">
+                                <state key="normal" title="Chicken Add &amp; Remove"/>
+                                <connections>
+                                    <action selector="didClickChickTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hgq-SI-heL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="278-VD-7s6">
+                                <state key="normal" title="Human + Chicken + Alien Add &amp; Remove"/>
+                                <connections>
+                                    <action selector="didClickHumanChickenAlienTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ehn-RY-c2m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghk-3s-OlU">
+                                <state key="normal" title="Human + Chicken Add &amp; Remove"/>
+                                <connections>
+                                    <action selector="didClickHumanChickenTest:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="6z8-6l-hRw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Quj-Rh-Yqf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="022-xZ-pUO"/>
+                            <constraint firstItem="ghk-3s-OlU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I1E-ve-bnC"/>
+                            <constraint firstItem="Quj-Rh-Yqf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I9i-84-WuP"/>
+                            <constraint firstItem="ghk-3s-OlU" firstAttribute="top" secondItem="YzT-nA-uyh" secondAttribute="bottom" constant="8" id="M6R-vo-ksm"/>
+                            <constraint firstItem="278-VD-7s6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QEN-8o-RZr"/>
+                            <constraint firstItem="YzT-nA-uyh" firstAttribute="top" secondItem="Quj-Rh-Yqf" secondAttribute="bottom" constant="8" id="Wcj-XH-k66"/>
+                            <constraint firstItem="YzT-nA-uyh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gHp-fg-50K"/>
+                            <constraint firstItem="278-VD-7s6" firstAttribute="top" secondItem="ghk-3s-OlU" secondAttribute="bottom" constant="8" id="vWS-MU-b5b"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
